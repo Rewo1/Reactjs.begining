@@ -4,8 +4,8 @@ export default function Second() {
     return (
         <>
 
-       <p>helll</p>
-       
-       </>
+            <p>hellloo</p>
+
+        </>
     )
 }
