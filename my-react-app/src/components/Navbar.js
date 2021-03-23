@@ -1,9 +1,29 @@
 import React from 'react'
-import{Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
     <>
+      <div className="container">
+        <div className="row">
+        <div className="col-md-8">
+        <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            </div>
+
+        <div className="col-md-4">
+          <ul className="d-flex">
+            <li className="list-unstyled"><Link className="text decoration-none p-3" to="/signup">Signup</Link></li>
+            <li className="list-unstyled"><Link className="text decoration-none p-3" to="/signin">Signin</Link></li>
+
+          </ul>
+
+        </div>
+        </div>
+
+      </div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <Link class="navbar-brand" to="/">E-Commerce</Link>
