@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 function Navbar() {
   return (
     <>
-      <div className="container">
-        <div className="row">
+      <div className="container-fluid">
+        <div className="row align-items-center" style={{backgroundColor:'#131921'}}>
         <div className="col-md-8">
         <form class="d-flex">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
@@ -15,8 +15,10 @@ function Navbar() {
 
         <div className="col-md-4">
           <ul className="d-flex">
-            <li className="list-unstyled"><Link className="text decoration-none p-3" to="/signup">Signup</Link></li>
-            <li className="list-unstyled"><Link className="text decoration-none p-3" to="/signin">Signin</Link></li>
+            <li className="list-unstyled"><Link className="text decoration-none p-3 text-white" to="/signup"><i class="bi bi-person-plus-fill" style={{color:'orange',fontSize:'20px'}}></i>&nbsp;Signup</Link></li>
+            <li className="list-unstyled"><Link className="text decoration-none p-3 text-white" to="/signin"><i class="bi bi-arrow-right-square"style={{color:'orange',fontSize:'20px'}}></i>&nbsp;Signin</Link></li>
+            <li className="list-unstyled"><Link className="text decoration-none p-2 text-white"><i class="bi bi-cart"style={{color:'orange',fontSize:'25px'}}></i>
+            <sup style={{fontSize:'10px',backgroundColor:'red',borderRadius:'50%',padding:'3px',color:'white'}}>5</sup>&nbsp;</Link></li>
 
           </ul>
 
@@ -24,22 +26,22 @@ function Navbar() {
         </div>
 
       </div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <Link class="navbar-brand" to="/">E-Commerce</Link>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+      <nav className="navbar navbar-expand-lg navbar-light " style={{backgroundColor:'#232f3e'}}>
+        <div className="container-fluid">
+          <Link className="navbar-brand text-white" to="/">E-Commerce</Link>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <Link class="nav-link active" aria-current="page" to="/">Home</Link>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link className="nav-link active text-white" aria-current="page" to="/">Home</Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link" to="/offer">Offer</Link>
+              <li className="nav-item">
+                <Link className="nav-link text-white" to="/offer">Offer</Link>
               </li>
-              <li class="nav-item dropdown">
-                <Link class="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <li className="nav-item dropdown">
+                <Link className="nav-link dropdown-toggle text-white" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown
           </Link>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -49,14 +51,9 @@ function Navbar() {
                   <li><Link class="dropdown-item" to="#">Something else here</Link></li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link disabled" to="#" tabindex="-1" aria-disabled="true">Disabled</Link>
-              </li>
+             
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+           
           </div>
         </div>
       </nav>
