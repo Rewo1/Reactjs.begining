@@ -2,6 +2,7 @@ import React from 'react'
 import Footer from './Footer'
 import Carousel from './Carousel'
 import Product from './Product'
+import Trending from './Trending'
 import Navbar from './Navbar'
 
 function Home() {
@@ -10,6 +11,7 @@ function Home() {
             <Navbar />
             <Carousel />
             <Product />
+            <Trending/>
             <Footer />
 
         </>
